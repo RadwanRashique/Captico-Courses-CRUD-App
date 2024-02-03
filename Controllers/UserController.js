@@ -3,6 +3,7 @@ const CourseModel=require('../Model/CourseModel')
 const cloudinary=require('cloudinary')
 const jwt= require('jsonwebtoken')
 const bcrypt=require('bcrypt')
+const courseModel = require('../Model/CourseModel')
 
 const RegisterUser=async(req,res)=>{
     try{
@@ -108,7 +109,10 @@ const {courseName,courseImage,courseDescription,price}=req.body
 
 const DisplayCourseData=async(req,res)=>{
     try{
-
+      
+        const courseData= await courseModel.find()
+        
+        res.status(200).json({success:true,courseData:courseData})
     }
     catch(error){
         console.error(error,"at DisplayCourseData")

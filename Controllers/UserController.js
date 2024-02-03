@@ -145,7 +145,9 @@ const EditCourseData=async(req,res)=>{
 
 const DeleteCourseData=async(req,res)=>{
     try{
-      
+        const courseId= req.params.id
+        await courseModel.findByIdAndDelete(courseId)
+     return   res.status(200).json({message:"Course Successfully deleted",success:true})
 
     }
     catch(error){

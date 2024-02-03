@@ -18,7 +18,7 @@ const RegisterUser=async(req,res)=>{
         console.log(SecurePassword)
   
         const Data=  new UserModel({
-          name:username,
+          name,
           email,
           password:SecurePassword,
           phone
@@ -36,6 +36,21 @@ const RegisterUser=async(req,res)=>{
 const LoginUser=async(req,res)=>{
     try{
 
+        const {email,password}=req.body
+      
+        const Emailcheck= await UserModel.findOne({email:email})
+        if(!Emailcheck){
+            // status code 404 badrequest
+         return    res.status(200).json({message:"user Not found Check The Mail",success:false})
+        }
+
+        const passwordVerify= await bcrypt.compare(password,Emailcheck.password)
+        if(!passwordVerify){
+          return   res.status(200).json({message:"password Incorrect",success:false})
+        }
+      
+     const token=  jwt.sign({UserId:Emailcheck._id},process.env.SECRET,{expiresIn:'1d'})
+        return  res.status(200).json({message:"Successfully Loged-In",success:true,token:token})
     }
     catch(error){
         console.error(error,"at LoginUser")

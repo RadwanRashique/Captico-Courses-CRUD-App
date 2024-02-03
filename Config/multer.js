@@ -30,7 +30,7 @@ const imageFilter = function (req, file, cb) {
     cb(null, true);
 };
 
-const upload = multer({ storage: storage, fileFilter: imageFilter },console.log(imageFilter))
+const upload = multer({ storage: storage, fileFilter: imageFilter },)
 
 
 module.exports = {

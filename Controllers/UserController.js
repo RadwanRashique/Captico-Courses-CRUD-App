@@ -80,6 +80,23 @@ const DisplayUserName=async(req,res)=>{
 const AddCourse=async(req,res)=>{
     try{
 
+        
+const {courseName,courseImage,courseDescription,price}=req.body
+
+ 
+  
+
+ const CourseModel= new ({
+
+    courseName,
+    courseImage,
+    courseDescription,
+    price
+ })
+
+   await  CourseModel.save()
+       res.status(201).json({message:"course Successfully Added",success:true})
+
     }
     catch(error){
         console.error(error,"at AddCourse")

@@ -63,6 +63,11 @@ const LoginUser=async(req,res)=>{
 const DisplayUserName=async(req,res)=>{
     try{
 
+        const userId= req.userId
+        const Data= await UserModel.findById(userId)
+       const username=Data.name
+      
+      return  res.status(200).json({success:true,userName:username})
     }
     catch(error){
         console.error(error,"at DisplayUserName")

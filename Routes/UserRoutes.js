@@ -8,3 +8,5 @@ userRouter.post('/addCourse',userController.AddCourse)
 userRouter.get('/getCourseData',userController.DisplayCourseData)
 userRouter.put('/editCourse',userController.EditCourseData)
 userRouter.delete('/deleteCoures',userController.DeleteCourseData)
+
+module.exports=userRouter

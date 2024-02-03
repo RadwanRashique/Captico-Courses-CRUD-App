@@ -12,7 +12,8 @@ app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
 dbConnection()
-// app.use('/api/user',UserRoute)
+const UserRoute= require('./Routes/UserRoutes')
+app.use('/api/user',UserRoute)
 const port = process.env.PORT
 app.listen(port,()=>{
     console.log(`Server is running on port ${port}`)

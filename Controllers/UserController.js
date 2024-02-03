@@ -14,15 +14,6 @@ cloudinary.config({
     secure: true,
 });
 
-cloudinary.config({
-    cloud_name: '',
-    api_key: '',
-    api_secret: ''
-});
-
-
-
-
 
 const RegisterUser=async(req,res)=>{
     try{
@@ -101,12 +92,14 @@ const AddCourse=async(req,res)=>{
     try{
 
         
-const {courseName,courseImage,courseDescription,price}=req.body
+const {courseName,courseDescription,price}=req.body
+const courseImage = req.file.path
 
+const cloudinaryResponse = await cloudinary.uploader.upload(courseImage);
  const newCourse= new CourseModel({
 
     courseName,
-    courseImage,
+    courseImage: cloudinaryResponse.secure_url,
     courseDescription,
     price
  })
@@ -139,22 +132,26 @@ const DisplayCourseData=async(req,res)=>{
 const EditCourseData=async(req,res)=>{
     try{
         const courseId = req.params.id;
-        const updatedFields = req.body;
+        const { courseName, courseDescription, price } = req.body;
+        const courseImage = req.file.path; 
+        const cloudinaryResponse = await cloudinary.uploader.upload(courseImage);
 
-        // Constructing the update object dynamically
-        const updateObject = {};
-        for (const key in updatedFields) {
-            updateObject[key] = updatedFields[key];
-        }
+       
+        const updateObject = {
+            courseName,
+            courseImage: cloudinaryResponse.secure_url, 
+            courseDescription,
+            price
+        };
 
         const updatedCourse = await CourseModel.findOneAndUpdate(
             { _id: courseId },
             { $set: updateObject },
-            { new: true } 
+            { new: true }
         );
 
-        res.status(200).json({ message: "course Successfully Updated", success: true });
-    }
+        res.status(200).json({ message: "Course Successfully Updated", success: true });
+    } 
     catch(error){
         console.error(error,"at EditCourseData")
         res.status(500).json({message:"Internal server error",success:false})

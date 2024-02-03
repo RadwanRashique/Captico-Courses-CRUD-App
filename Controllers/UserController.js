@@ -84,9 +84,6 @@ const AddCourse=async(req,res)=>{
         
 const {courseName,courseImage,courseDescription,price}=req.body
 
- 
-  
-
  const CourseModel= new ({
 
     courseName,
@@ -122,7 +119,22 @@ const DisplayCourseData=async(req,res)=>{
 
 const EditCourseData=async(req,res)=>{
     try{
+        const courseId = req.params.id;
+        const updatedFields = req.body;
 
+        // Constructing the update object dynamically
+        const updateObject = {};
+        for (const key in updatedFields) {
+            updateObject[key] = updatedFields[key];
+        }
+
+        const updatedCourse = await courseModel.findOneAndUpdate(
+            { _id: courseId },
+            { $set: updateObject },
+            { new: true } 
+        );
+
+        res.status(200).json({ message: "Task Successfully Updated", success: true });
     }
     catch(error){
         console.error(error,"at EditCourseData")
@@ -133,6 +145,7 @@ const EditCourseData=async(req,res)=>{
 
 const DeleteCourseData=async(req,res)=>{
     try{
+      
 
     }
     catch(error){

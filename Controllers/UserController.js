@@ -3,7 +3,26 @@ const CourseModel=require('../Model/CourseModel')
 const cloudinary=require('cloudinary')
 const jwt= require('jsonwebtoken')
 const bcrypt=require('bcrypt')
-const courseModel = require('../Model/CourseModel')
+const cloudinary = require("cloudinary").v2;
+
+
+
+cloudinary.config({
+    cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+    api_key: process.env.CLOUDINARY_API_KEY,
+    api_secret: process.env.CLOUDINARY_API_SECRET,
+    secure: true,
+});
+
+cloudinary.config({
+    cloud_name: '',
+    api_key: '',
+    api_secret: ''
+});
+
+
+
+
 
 const RegisterUser=async(req,res)=>{
     try{
@@ -84,7 +103,7 @@ const AddCourse=async(req,res)=>{
         
 const {courseName,courseImage,courseDescription,price}=req.body
 
- const CourseModel= new ({
+ const newCourse= new CourseModel({
 
     courseName,
     courseImage,
@@ -92,7 +111,7 @@ const {courseName,courseImage,courseDescription,price}=req.body
     price
  })
 
-   await  CourseModel.save()
+   await  newCourse.save()
        res.status(201).json({message:"course Successfully Added",success:true})
 
     }
@@ -107,7 +126,7 @@ const {courseName,courseImage,courseDescription,price}=req.body
 const DisplayCourseData=async(req,res)=>{
     try{
       
-        const courseData= await courseModel.find()
+        const courseData= await CourseModel.find()
         
         res.status(200).json({success:true,courseData:courseData})
     }
@@ -128,13 +147,13 @@ const EditCourseData=async(req,res)=>{
             updateObject[key] = updatedFields[key];
         }
 
-        const updatedCourse = await courseModel.findOneAndUpdate(
+        const updatedCourse = await CourseModel.findOneAndUpdate(
             { _id: courseId },
             { $set: updateObject },
             { new: true } 
         );
 
-        res.status(200).json({ message: "Task Successfully Updated", success: true });
+        res.status(200).json({ message: "course Successfully Updated", success: true });
     }
     catch(error){
         console.error(error,"at EditCourseData")
@@ -146,7 +165,7 @@ const EditCourseData=async(req,res)=>{
 const DeleteCourseData=async(req,res)=>{
     try{
         const courseId= req.params.id
-        await courseModel.findByIdAndDelete(courseId)
+        await CourseModel.findByIdAndDelete(courseId)
      return   res.status(200).json({message:"Course Successfully deleted",success:true})
 
     }

@@ -1,18 +1,18 @@
-const mongoose=require('mongoose')
-const dotenv=require('dotenv').config()
+const mongoose = require('mongoose')
+const dotenv = require('dotenv').config()
 
-const MONGO_URL=process.env.MONGODB_URL
+const MONGO_URL = process.env.MONGODB_URL
 
-const dbConfig=()=>{
-    try{
+const dbConfig = () => {
+    try {
         mongoose.connect(MONGO_URL)
         console.log("MongoDB database connected")
 
     }
-    catch(error){
+    catch (error) {
         console.error(error)
         process.exit(1)
     }
 }
 
-module.exports=dbConfig
+module.exports = dbConfig

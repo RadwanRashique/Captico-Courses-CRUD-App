@@ -37,9 +37,9 @@ function CourseList() {
   }, []);
 
   // handling edit click
-const handleEditCourse = async (course) => {
-  navigate(`${RouteVariables.EditCourse}/${course._id}`, { state: { courseData: course } });
-};
+  const handleEditCourse = async (course) => {
+    navigate(`${RouteVariables.EditCourse}/${course._id}`, { state: { courseData: course } });
+  };
 
 
   // handling delete

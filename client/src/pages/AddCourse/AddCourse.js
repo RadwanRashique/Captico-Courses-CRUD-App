@@ -31,7 +31,7 @@ function AddCourse() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    setLoading(true); // Set loading to true when form is being submitted
+
 
     const result = await Swal.fire({
       title: "Confirmation",
@@ -42,54 +42,54 @@ function AddCourse() {
       cancelButtonColor: "#d33",
       confirmButtonText: "Yes, submit",
       cancelButtonText: "Cancel",
-  });
+    });
 
- 
-  if (result.isConfirmed) {
-      setLoading(true); 
+
+    if (result.isConfirmed) {
+      setLoading(true);
 
       // Validate if all fields are filled
       if (!courseDetails.courseName || !courseDetails.price || !courseDetails.courseDescription || !courseDetails.image) {
-          setLoading(false); // Reset loading state
-          return toast.error("Please fill all fields");
+        setLoading(false); // Reset loading state
+        return toast.error("Please fill all fields");
       }
 
       // Validate if price is a number
       if (isNaN(courseDetails.price)) {
-          setLoading(false); // Reset loading state
-          return toast.error("Price should be a number");
+        setLoading(false); // Reset loading state
+        return toast.error("Price should be a number");
       }
 
-    const formData = new FormData();
-    formData.append('courseName', courseDetails.courseName);
-    formData.append('price', courseDetails.price);
-    formData.append('courseDescription', courseDetails.courseDescription);
-    formData.append('image', courseDetails.image);
+      const formData = new FormData();
+      formData.append('courseName', courseDetails.courseName);
+      formData.append('price', courseDetails.price);
+      formData.append('courseDescription', courseDetails.courseDescription);
+      formData.append('image', courseDetails.image);
 
-    try {
-      const response = await userRequest({
-        url: ApiEndPoints.addCourseData,
-        method: 'post',
-        data: formData,
-      });
+      try {
+        const response = await userRequest({
+          url: ApiEndPoints.addCourseData,
+          method: 'post',
+          data: formData,
+        });
 
-      if (response.data.success) {
-        toast.success(response.data.message);
-        navigate(RouteVariables.CourseList);
-      } else {
-        toast.error(response.data.message);
+        if (response.data.success) {
+          toast.success(response.data.message);
+          navigate(RouteVariables.CourseList);
+        } else {
+          toast.error(response.data.message);
+        }
+      } catch (error) {
+        console.error(error);
+        toast.error('Sorry, there was an error processing your request.');
+      } finally {
+        setLoading(false);
       }
-    } catch (error) {
-      console.error(error);
-      toast.error('Sorry, there was an error processing your request.');
-    } finally {
-      setLoading(false);
-    }
-  };
+    };
   }
   return (
     <>
-      {loading && ( 
+      {loading && (
         <div className="loading-container">
           <div className="loading"></div>
         </div>

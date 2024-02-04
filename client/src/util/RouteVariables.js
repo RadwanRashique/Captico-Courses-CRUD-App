@@ -1,10 +1,10 @@
 export const RouteVariables={
 
 
-    userRegister:"/register",
-    UserLogin:"/",
+    userRegister:"/",
+    UserLogin:"/login",
     CourseList:"/courselist",
     AddCourse:"/addcourse",
-    EditCourse:"/editcourse",
+    EditCourse:"/editCourse",
 
 }

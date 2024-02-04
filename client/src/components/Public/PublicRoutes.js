@@ -5,7 +5,7 @@ import { RouteVariables } from '../../util/RouteVariables'
 function userPublicRoute(props) {
     if (localStorage.getItem("token")) {
 
-        return <Navigate to={RouteVariables.TaskList} />
+        return <Navigate to={RouteVariables.CourseList} />
     }
 
     else {

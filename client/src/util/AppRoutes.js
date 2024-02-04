@@ -6,8 +6,8 @@ import Login from '../pages/Login/Login'
 import AddCourse from '../pages/AddCourse/AddCourse'
 import CourseList from '../pages/CourseList/CourseList'
 import EditCourse from '../pages/EditCourse/EditCourse';
-import PublicRoutes from '../components/Public/PublicRoutes'
 import ProtectedRoutes from '../components/Protected/ProtectedRoutes'
+import PublicRoutes from '../components/Public/PublicRoutes'
 import {Toaster} from 'react-hot-toast'
 
 
@@ -21,7 +21,7 @@ function AppRoutes() {
    
 <Route path={RouteVariables.userRegister} element={<PublicRoutes><Register/></PublicRoutes>} />
 <Route path={RouteVariables.UserLogin}  element={<PublicRoutes><Login/></PublicRoutes>}/>
-<Route path={RouteVariables.AddCourse}  element={<AddCourse/>}/>
+<Route path={RouteVariables.AddCourse}  element={<ProtectedRoutes><AddCourse/></ProtectedRoutes>}/>
 <Route path={RouteVariables.CourseList}  element={<ProtectedRoutes><CourseList/></ProtectedRoutes>}/>
 <Route path={`${RouteVariables.EditCourse}/:courseId`}  element={<ProtectedRoutes><EditCourse/></ProtectedRoutes>}/>
 

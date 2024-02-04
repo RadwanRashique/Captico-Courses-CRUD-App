@@ -2,10 +2,11 @@ export const ApiEndPoints={
 
     userRegister:'/api/user/register',
     userLogin:'/api/user/login',
-    getUserName:'/api/user/userName',
-    addTaskData:'/api/user/addCourse',
-    getTaskData:'/api/user/listCourse',
-    deleteTask:'/api/user/DeleteCourse',
-    editTask:'/api/user/EditCourse'
+    getUserName:'/api/user/getUserName',
+    addCourseData:'/api/user/addCourse',
+    getCourseData:'/api/user/getCourseData',
+    deleteCourse:'/api/user/deleteCoures',
+    
+    editCourse:'/api/user/editCourse'
     
 }

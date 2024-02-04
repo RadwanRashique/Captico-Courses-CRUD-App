@@ -9,7 +9,7 @@ export const userRequest = ({ ...options }) => {
     "token"
   )}`;
 
-  console.log(user.defaults.headers.common.Authorization,"dddd")
+  console.log(user.defaults.headers.common.Authorization,)
   // callback functions for handling responses and errors.
   const onSuccess = (response) => response;
   const onError = (error) => {

@@ -9,7 +9,8 @@
 
 .container {
     width: 100vw;
-  
+    margin-bottom: 20px;
+    box-sizing: border-box;
 }
 
 .navbar {
@@ -20,10 +21,6 @@
     background: linear-gradient(to right, #b993d6, #8ca6db);
     padding: 15px 7px;
 }
-li{
-    color: white;
-    font-weight: bold;
-}
 
 .logo {
     width: 160px;
@@ -31,43 +28,74 @@ li{
     border-radius: 10px;
 }
 
-@media (max-width: 600px) {
-    .logo {
-        width: 100px;
+
+
+@media (max-width: 768px) {
+    .button-box{
         
+        width: 300px;
+       
+    }
+    .logo {
+        width: 70px;
     }
     .button-box {
         width: 20%;
     }
-    .courseAddbtn {
-        width: 100px;
-        margin-left: 10px;
-        font-size: 8px;
+    .logout-btn{
+    
     }
-    .logout-btn {
-        width: 100px;
-        margin-left: 10px;
-        font-size: 8px;
+    .navbar li {
+        font-size: 9px; /* Decrease font size for smaller screens */
+    } 
+    .button-box button{
+       
+        width: 90px;
+       font-size: 10px;
+       height: 15px;
     }
 }
 
-@media (max-width: 300px) {
+@media (max-width: 380px) {
+   
     .logo {
-        width: 75px;
+        width: 40px;
+    }
+   
+    
+    .navbar li {
+        margin-left: 10px;
+        font-size: 6px; /* Decrease font size for smaller screens */
+    } 
+    .button-box button{
+       margin-left: 10px;
+        width: 80px;
+       font-size: 10px;
+       height: 12px;
+    }
+}
+@media (min-width: 820px) {
+    .button-box{
+        
+        width: 300px;
+       
+    }
+    .logo {
+        width: 120px;
     }
     .button-box {
-        width: 10%;
+        width: 20%;
     }
-    .courseAddbtn,
-    .logout-btn {
-        width: 40px;
-        height: 20px;
-        font-size: 8px;
-        margin-left: 5px;
-        border-radius: 3px;
-    }
-    li {
-        font-size: 8px;
+   
+    .navbar li {
+        font-size: 15px; /* Decrease font size for smaller screens */
+    } 
+    .button-box button{
+       
+        width: 100px;
+        
+       font-size: 12px;
+       height: 35px;
     }
 }
 
@@ -83,21 +111,14 @@ li {
 }
 
 .button-box {
-    width: 40%;
-    height: 7vh;
+    height: 8vh;
+    width: 200px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    box-sizing: border-box;
-    margin-right: 30px;
+    justify-content:space;
+    margin-right: 25px;
 }
 
-.toggle-icon {
-    width: 50px;
-    height: 30px;
-    cursor: pointer;
-    margin-left: 40px;
-}
 
 .courseAddbtn {
     background: linear-gradient(to right, #6441a5, #2a0845);
@@ -106,17 +127,23 @@ li {
     border: none;
     color: white;
     border-radius: 10px;
+    cursor: pointer;
     animation: rotateClockwise 1s linear;
 }
 
 .logout-btn {
     width: 200px;
+    cursor: pointer;
     height: 30px;
-    background-color: rgb(234, 14, 14);
+    background-color: rgba(234, 14, 14, 0.642);
     border: none;
     color: white;
     border-radius: 10px;
+    
     animation: rotateAntiClockwise 1s linear;
+}
+.logout-btn:hover{
+background-color: rgba(26, 137, 185, 0.175);
 }
 
 @keyframes rotateClockwise {

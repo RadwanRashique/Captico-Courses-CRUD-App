@@ -7,11 +7,12 @@
     height: 100vh;
   }
   
-  .add-course-box {
+  add-course-box {
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Align items to the start (top) of the container */
+    align-items: flex-start;
     margin-top: 40px;
+    padding: 0 20px; /* Add padding to the left and right sides */
   }
   
   .add-course-box input[type='file'] {
@@ -64,4 +65,6 @@
         }
     
   }
+  
+  
   

@@ -45,7 +45,7 @@ const RegisterUser=async(req,res)=>{
 
 const LoginUser=async(req,res)=>{
     try{
-
+console.log(req.body,"tyui")
         const {email,password}=req.body
       
         const Emailcheck= await UserModel.findOne({email:email})

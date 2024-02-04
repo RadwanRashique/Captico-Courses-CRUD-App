@@ -1,9 +1,16 @@
-import React from 'react';
+
+import React,{useState,useEffect} from 'react';
 import './CourseList.css'; // Import CSS file for styling
 import Header from '../../components/Header/Header';
+import { ApiEndPoints } from '../../util/apiRoutes';
+import { RouteVariables } from '../../util/RouteVariables'
+import { userRequest } from '../../Helper/Interceptor';
+import toast from 'react-hot-toast';
 
+import { useNavigate } from 'react-router-dom';
 function CourseList() {
-    // Sample course data
+    const navigate = useNavigate()
+    const [courselist,setCourselist]=useState([])
     const courseData = [
  { id: 1, name: 'Course 1', image: 'image1.jpg', description: 'Description 1', price: '$10.00' },
         { id: 2, name: 'Course 2', image: 'image2.jpg', description: 'Description 2', price: '$20.00' },

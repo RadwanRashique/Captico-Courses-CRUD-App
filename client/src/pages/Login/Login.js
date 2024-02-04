@@ -31,6 +31,33 @@ console.log(formData)
       return;
     }
 
+    userRequest({
+      url:ApiEndPoints.userLogin,
+      method:'post',
+      data:formData
+   }).then((response)=>{
+console.log(response,"3456789")
+       
+          if (response.data.success) {
+              toast.success(response.data.message)
+              
+              localStorage.setItem("token", response.data.token)
+              navigate(RouteVariables.CourseList)
+              
+          }
+          else {
+
+              toast.error(response.data.message)
+          }
+      
+   }).catch((error)=>{
+    
+     console.log(error);
+      
+    toast.error('Sorry, this file is not acceptable.');
+    
+   
+   })
   }
   
   return (

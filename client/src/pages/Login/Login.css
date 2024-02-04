@@ -1,0 +1,106 @@
+.logincontainer {
+    background: linear-gradient(to left, #642b73, #c6426e);
+    height: 100vh;
+    padding: 5px;
+  }
+  
+  .login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 40px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+    transform: translate(-50%, -50%);
+    width: 80%; /* Adjust the width as needed */
+    max-width: 400px; /* Limit the maximum width */
+  }
+  
+  .login-box h2 {
+    padding: 0px;
+    text-align: center;
+    margin: 0 0 30px;
+    color: #fff;
+    font-size: 2.5rem;
+  }
+  
+  .inputdiv label {
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    width: 100%; /* Ensure label takes full width */
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+  }
+  
+  .signqus {
+    color: white;
+    font-size: 1.2rem;
+  }
+  
+  a {
+    text-decoration: none;
+    color: rgba(152, 189, 15, 0.692);
+    font-weight: bold;
+  }
+  
+  form {
+    text-align: center;
+  }
+  
+  .scaleUp {
+    margin-top: 20px;
+    background: linear-gradient(to bottom, #ff8008, #ffc837);
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+    animation: pulse 2s infinite; /* Button animation */
+    transition: background-color 0.3s ease; /* Add transition effect */
+  }
+  
+  button:hover {
+    background-color: #086f49;
+  }
+  
+  /* Button animation */
+  @keyframes pulse {
+    0% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+    }
+    70% {
+      transform: scale(1);
+      box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    }
+    100% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+  }
+  
+  /* Additional animation for other elements */
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Apply animation to elements */
+  .login-box h2,
+  .inputdiv label,
+  .signqus,
+  a {
+    animation: slideInFromLeft 1s ease-out; /* Apply animation */
+  }
+  

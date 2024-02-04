@@ -1,0 +1,181 @@
+
+
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  
+  
+  main {
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(to top, #1d2b64, #f8cdda);
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .box {
+    position: relative;
+    width: 100%;
+    max-width: 400px; /* Adjust width as needed */
+    height: auto;
+    background-color: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+    overflow: auto; /* Add this line */
+  }
+  
+  .inner-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #0099f7, #f11712);
+    border-radius: 1rem;
+  }
+  
+  .Register-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Center text inside the form */
+    animation: float 2s infinite;
+  }
+  
+  .Regbtn {
+    margin-top: 1rem;
+    padding: 0.5rem 2rem;
+    font-size: 1rem;
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    border-radius: 0.5rem; /* Add border-radius */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation: float 2s infinite;
+  }
+  
+  .Container-Form {
+    margin-top: 1rem;
+  }
+  
+  label {
+    font-size: 1.2rem; /* Increase label size */
+    color: #333; /* Label color */
+    width: 100%; /* Ensure label takes full width */
+  }
+  
+  input {
+    width: 100%;
+    padding: 0.8rem; /* Adjust input padding */
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 0.5rem; /* Add border-radius */
+  }
+  .logo-img {
+    margin-top: 5px;
+    width: 50px; /* Adjust the width as needed */
+    height: 40px; /* Maintain aspect ratio */
+    border-radius: 30%; /* Round the corners */
+    animation: spin 2s linear infinite; /* Rotate the image continuously */
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+  .Regbtn:hover {
+    background-color: #0056b3; /* Button hover background color */
+  }
+
+  .bubble {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    animation: bubble 5s infinite ease-in-out;
+  }
+
+  .bubble:nth-child(1) {
+    top: 20%;
+    left: 10%;
+  }
+
+  .bubble:nth-child(2) {
+    top: 40%;
+    left: 30%;
+  }
+
+  .bubble:nth-child(3) {
+    top: 60%;
+    left: 50%;
+  }
+
+  .bubble:nth-child(4) {
+    top: 80%;
+    left: 70%;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  h1,
+h3,
+label {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: black;
+
+ 
+}
+label {
+  font-size: 1.2rem;
+  width: 100%;
+  font-weight: 500;
+ 
+}
+ 

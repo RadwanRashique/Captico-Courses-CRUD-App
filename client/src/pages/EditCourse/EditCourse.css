@@ -1,0 +1,75 @@
+.course-Edit-Container {
+    background: linear-gradient(to right, #175492, #fd746c);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+    height: 100vh;
+  }
+  
+  .Edit-course-box {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the start (top) of the container */
+   
+  }
+  
+  .Edit-course-box input[type='file'] {
+    background-color: white;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 8px;
+    
+  }
+  
+  .back-button {
+    width: 120px;
+    height: 25px;
+    margin: 20px;
+    border-radius: 5px;
+    border: none;
+    background: linear-gradient(to right, #4ca1af, #c4e0e5);
+    font-weight: bold;
+  }
+  
+  .Edit-page-back {
+    text-align: left;
+    margin-left: 10px;
+  }
+  
+  .Edit-button {
+    border-radius: 5px;
+    border: none;
+    width: 80px;
+    height: 30px;
+    color: white;
+    margin-top: 10px;
+    background: linear-gradient(to right, #ed4264, #ffedbc);
+  }
+  
+  .selected-image {
+    width: 150px;
+    margin-top: 30px;
+    border-radius: 10%;
+  }
+  @media (max-width:800px) {
+    .Edit-course-box{
+        margin-top: 140px;
+    }
+
+   
+}
+    @media (min-width:1200px) {
+        .Edit-course-box{
+            margin-top: 100px;
+        }
+        
+    
+  }
+  
+  label{
+    color:white;
+   
+    
+  }

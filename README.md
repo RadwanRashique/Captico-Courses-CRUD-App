@@ -73,6 +73,11 @@ This project allows you to seamlessly add, edit, and delete courses with MongoDB
 6. **PUT**: To edit course details (edit)
 7. **DELETE**: To delete a course from the database (delete)
 
+## Token Usage and Session Management
+
+- **Token Usage**: JSON Web Tokens (JWTs) are used for authentication. Upon successful login, a JWT is generated and sent to the client, which is then stored in the local storage.
+- **Session Management**: Protected routes are created that require a valid JWT to access. If the user is not authenticated, they are redirected to the login page. Public routes, on the other hand, are accessible without authentication.
+
 ## UI Setup
 
 - **SignUp**: For registration (name, email, phone, password, confirmPassword)

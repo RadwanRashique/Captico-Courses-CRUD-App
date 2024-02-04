@@ -91,5 +91,39 @@ This project allows you to seamlessly add, edit, and delete courses with MongoDB
 
 - **UserModel**: To store user details (fields: name, email, phone, password)
 - **CourseModel**: To store course details (fields: courseName, courseImage, courseDescription, price)
+- ## How to Use 🚀
 
+1. Clone the git repository.
+2. Install dependencies by running `npm install` in the root directory.
+3. Set up environment variables by creating a `.env` file in the root directory with the following content:
+4. .env   file:
+**PORT=5000**
+**MONGODB_URL=mongodb+srv://your-mongodb-connection-string**
+**SECRET=your-secret-key**
+**CLOUDINARY_CLOUD_NAME=your-cloudinary-cloud-name**
+**CLOUDINARY_API_KEY=your-cloudinary-api-key**
+**CLOUDINARY_API_SECRET=your-cloudinary-api-secret**
+
+
+5. Start the backend server by running `npm start` in the root directory.
+6. Navigate to the client directory in a new terminal by running `cd client`.
+7. Install frontend dependencies by running `npm install`.
+8. Start the frontend server by running `npm start`.
+
+
+
+### Workflow
+
+Here's a video demonstrating the workflow:
+
+[![Watch the video](https://img.youtube.com/vi/IJ4lCJmteMk/0.jpg)](https://youtu.be/IJ4lCJmteMk?si=M7n1VyDR3r0dUZau)
+## Usage Instructions 📋
+
+- Sign up for a new account by providing the required details, including username, email, phone number, and password. Make sure to follow the validation rules provided.
+- Log in with your registered email and password.
+- Once logged in, you will be redirected to the course list pannel.
+- On the course list, you can see a header component with logo,userName, add task button and logout  button.
+- add a new coures .
+- edit the existing if needed
+- delete the existing if needed
 ## 🌟 Thank you for checking out my project! 🌟

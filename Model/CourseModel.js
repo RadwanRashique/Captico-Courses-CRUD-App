@@ -11,7 +11,8 @@ const courseSchema=mongoose.Schema({
     },
     price:{
         type:Number
-    }
+    },
+  
 },{
     timestamps:true
 })

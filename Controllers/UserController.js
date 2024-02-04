@@ -45,7 +45,6 @@ const RegisterUser=async(req,res)=>{
 
 const LoginUser=async(req,res)=>{
     try{
-console.log(req.body,"tyui")
         const {email,password}=req.body
       
         const Emailcheck= await UserModel.findOne({email:email})
@@ -89,7 +88,7 @@ const DisplayUserName=async(req,res)=>{
 
 const AddCourse=async(req,res)=>{
     try{
-
+       
         
 const {courseName,courseDescription,price}=req.body
 const courseImage = req.file.path
@@ -117,9 +116,9 @@ const cloudinaryResponse = await cloudinary.uploader.upload(courseImage);
 
 const DisplayCourseData=async(req,res)=>{
     try{
-      
-        const courseData= await CourseModel.find()
-        
+    
+     
+        const courseData = await CourseModel.find().sort({ updatedAt: -1, createdAt: -1 });
         res.status(200).json({success:true,courseData:courseData})
     }
     catch(error){
@@ -130,17 +129,18 @@ const DisplayCourseData=async(req,res)=>{
 
 const EditCourseData=async(req,res)=>{
     try{
+       
         const courseId = req.params.id;
         const { courseName, courseDescription, price } = req.body;
-        const courseImage = req.file.path; 
-        const cloudinaryResponse = await cloudinary.uploader.upload(courseImage);
+        
+    
 
        
         const updateObject = {
             courseName,
-            courseImage: cloudinaryResponse.secure_url, 
             courseDescription,
-            price
+            price,
+            
         };
 
         const updatedCourse = await CourseModel.findOneAndUpdate(
@@ -160,6 +160,7 @@ const EditCourseData=async(req,res)=>{
 
 const DeleteCourseData=async(req,res)=>{
     try{
+        console.log(req.params)
         const courseId= req.params.id
         await CourseModel.findByIdAndDelete(courseId)
      return   res.status(200).json({message:"Course Successfully deleted",success:true})

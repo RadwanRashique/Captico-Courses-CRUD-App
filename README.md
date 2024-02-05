@@ -121,7 +121,8 @@ Here's a video demonstrating the workflow:
 
 
 ### code explanation
-[![video](http://img.youtube.com/vi/tIAc2nEE0hc/0.jpg)](https://youtu.be/tIAc2nEE0hc?si=f5t77rd3u6hQkWR5)
+[![video](https://img.youtube.com/vi/3pwnb3Isdnc/0.jpg)](https://youtu.be/3pwnb3Isdnc?si=aVUd5u8oGlyk77dA)
+
 
 
 ## Usage Instructions 📋

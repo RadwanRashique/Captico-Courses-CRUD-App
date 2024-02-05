@@ -42,6 +42,7 @@ This project allows you to seamlessly add, edit, and delete courses with MongoDB
 - **Axios**: To make HTTP requests
 - **React Hot Toast**: To show toast notifications 🍞
 - **React Icons**: To get React icons
+- **SweetAlert2** - A beautiful pop up 
 
 ### Folders and Files
 

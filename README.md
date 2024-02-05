@@ -3,7 +3,7 @@
 🚀 Welcome to MERN CRUD Course Manager! 🚀
 
 This project allows you to seamlessly add, edit, and delete courses with MongoDB, Express.js, React.js, and Node.js. 
-
+##Live Link  :    https://65c0be409755a0009ac06f76--resilient-tiramisu-b84d3b.netlify.app/courselist
 ## Backend Setup
 
 ### Frameworks and Libraries

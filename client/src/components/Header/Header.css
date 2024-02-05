@@ -46,7 +46,7 @@
     
     }
     .navbar li {
-        font-size: 9px; /* Decrease font size for smaller screens */
+        font-size: 9px; 
     } 
     .button-box button{
        
@@ -65,7 +65,7 @@
     
     .navbar li {
         margin-left: 10px;
-        font-size: 6px; /* Decrease font size for smaller screens */
+        font-size: 6px; 
     } 
     .button-box button{
        margin-left: 10px;
@@ -88,7 +88,7 @@
     }
    
     .navbar li {
-        font-size: 15px; /* Decrease font size for smaller screens */
+        font-size: 15px;
     } 
     .button-box button{
        

@@ -13,8 +13,8 @@
     border-radius: 10px;
     box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
     transform: translate(-50%, -50%);
-    width: 80%; /* Adjust the width as needed */
-    max-width: 400px; /* Limit the maximum width */
+    width: 80%; 
+    max-width: 400px; 
   }
   
   .login-box h2 {
@@ -29,7 +29,7 @@
     border-radius: 5px;
     color: white;
     font-weight: bold;
-    width: 100%; /* Ensure label takes full width */
+    width: 100%; 
     margin-bottom: 10px;
     font-size: 1.5rem;
   }
@@ -60,8 +60,8 @@
     font-size: 1.5rem;
     border: none;
     cursor: pointer;
-    animation: pulse 2s infinite; /* Button animation */
-    transition: background-color 0.3s ease; /* Add transition effect */
+    animation: pulse 2s infinite; 
+    transition: background-color 0.3s ease; 
   }
   
   button:hover {
@@ -84,7 +84,7 @@
     }
   }
   
-  /* Additional animation for other elements */
+  
   @keyframes slideInFromLeft {
     0% {
       transform: translateX(-100%);
@@ -96,11 +96,11 @@
     }
   }
   
-  /* Apply animation to elements */
+  
   .login-box h2,
   .inputdiv label,
   .signqus,
   a {
-    animation: slideInFromLeft 1s ease-out; /* Apply animation */
+    animation: slideInFromLeft 1s ease-out; 
   }
   

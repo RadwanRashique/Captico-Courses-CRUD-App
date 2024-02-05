@@ -24,13 +24,13 @@
   .box {
     position: relative;
     width: 100%;
-    max-width: 400px; /* Adjust width as needed */
+    max-width: 400px; 
     height: auto;
     background-color: #fff;
     border-radius: 1rem;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
     padding: 2rem;
-    overflow: auto; /* Add this line */
+    overflow: auto; 
   }
   
   .inner-box {
@@ -45,7 +45,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center; /* Center text inside the form */
+    text-align: center; 
     animation: float 2s infinite;
   }
   
@@ -53,10 +53,10 @@
     margin-top: 1rem;
     padding: 0.5rem 2rem;
     font-size: 1rem;
-    background-color: #007bff; /* Button background color */
-    color: #fff; /* Button text color */
+    background-color: #007bff; 
+    color: #fff; 
     border: none;
-    border-radius: 0.5rem; /* Add border-radius */
+    border-radius: 0.5rem; 
     cursor: pointer;
     transition: all 0.3s ease;
     animation: float 2s infinite;
@@ -67,25 +67,25 @@
   }
   
   label {
-    font-size: 1.2rem; /* Increase label size */
-    color: #333; /* Label color */
-    width: 100%; /* Ensure label takes full width */
+    font-size: 1.2rem; 
+    color: #333; 
+    width: 100%; 
   }
   
   input {
     width: 100%;
-    padding: 0.8rem; /* Adjust input padding */
+    padding: 0.8rem; 
     margin-top: 0.5rem;
     font-size: 1rem;
-    border: 1px solid #ccc; /* Add border */
-    border-radius: 0.5rem; /* Add border-radius */
+    border: 1px solid #ccc; 
+    border-radius: 0.5rem;
   }
   .logo-img {
     margin-top: 5px;
-    width: 50px; /* Adjust the width as needed */
-    height: 40px; /* Maintain aspect ratio */
-    border-radius: 30%; /* Round the corners */
-    animation: spin 2s linear infinite; /* Rotate the image continuously */
+    width: 50px;
+    height: 40px; 
+    border-radius: 30%; 
+    animation: spin 2s linear infinite; 
 }
 
 @keyframes spin {
@@ -97,7 +97,7 @@
   }
 }
   .Regbtn:hover {
-    background-color: #0056b3; /* Button hover background color */
+    background-color: #0056b3; 
   }
 
   .bubble {

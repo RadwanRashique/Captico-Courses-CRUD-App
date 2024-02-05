@@ -1,8 +1,8 @@
 .course-list-container {
     margin: 20px;
-    text-align: center; /* Center text */
-    max-height: 400px; /* Set max height */
-    overflow-y: auto; /* Add scrollbar when content exceeds max height */
+    text-align: center;
+    max-height: 400px;
+    overflow-y: auto; 
     text-align: center;
     background: linear-gradient(to bottom, #f2994a, #f2c94c);
     border-radius: 20px;
@@ -25,7 +25,7 @@
 }
 
 .course-table th, .course-table td {
-    padding: 8px; /* Decrease padding for smaller screens */
+    padding: 8px; 
     border: 1px solid #ddd;
     text-align: left;
 }
@@ -36,17 +36,17 @@
 }
 
 .course-image {
-    width: 80px; /* Decrease image width for smaller screens */
+    width: 80px; 
 }
 
 .edit-btn, .delete-btn {
     background-color: #4CAF50;
     color: white;
-    padding: 6px 12px; /* Decrease button padding for smaller screens */
+    padding: 6px 12px; 
     border: none;
     cursor: pointer;
     border-radius: 4px;
-    margin-right: 3px; /* Decrease margin between buttons for smaller screens */
+    margin-right: 3px; 
 }
 
 .delete-btn {
@@ -55,16 +55,16 @@
 
 @media (max-width: 600px) {
     .course-table th, .course-table td {
-        padding: 6px; /* Further decrease padding for screens less than 600px */
+        padding: 6px;
     }
 
     .course-image {
-        width: 60px; /* Further decrease image width for screens less than 600px */
+        width: 60px;
     }
 
     .edit-btn, .delete-btn {
-        padding: 4px 8px; /* Further decrease button padding for screens less than 600px */
-        margin-right: 2px; /* Further decrease margin between buttons for screens less than 600px */
+        padding: 4px 8px; 
+        margin-right: 2px; 
     }
 }
 .loading-indicator {

@@ -10,7 +10,7 @@
   .Edit-course-box {
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Align items to the start (top) of the container */
+    align-items: flex-start; 
    
   }
   

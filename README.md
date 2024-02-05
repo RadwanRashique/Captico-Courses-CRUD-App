@@ -123,6 +123,15 @@ Here's a video demonstrating the workflow:
 ### code explanation
 [![video](https://img.youtube.com/vi/3pwnb3Isdnc/0.jpg)](https://youtu.be/3pwnb3Isdnc?si=aVUd5u8oGlyk77dA)
 
+###### How to clone and work this project in your local device                              
+1)Create a folder in your device
+2)take terminal  and by taking the cloned link  enter     ---- git clone    ***clonedlink
+3)now come back after closing than panel  and you can see  a folder named Captico-Courses-CRUD-App   .  Enter to that folder 
+4)Now type                 cd Captico-Courses-CRUD-App      in terminal   
+5)  Now  create an env file in the root directory  .  as    .env      and attack the env data.
+6)  now come back to the terminal and enter   npm start                (now server is running )
+7)  split and take another terminal  and enter  cd client         
+8) at that area enter    npm start
 
 
 ## Usage Instructions 📋

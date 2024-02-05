@@ -124,7 +124,7 @@ Here's a video demonstrating the workflow:
 ### code explanation
 [![video](https://img.youtube.com/vi/3pwnb3Isdnc/0.jpg)](https://youtu.be/3pwnb3Isdnc?si=aVUd5u8oGlyk77dA)
 
-###### How to clone and work this project in your local device                              
+## How to clone and work this project in your local device                              
 1)Create a folder in your device
 
 2)take terminal  and by taking the cloned link  enter     ---- git clone    ***clonedlink

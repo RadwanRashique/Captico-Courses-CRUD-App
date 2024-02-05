@@ -116,7 +116,8 @@ This project allows you to seamlessly add, edit, and delete courses with MongoDB
 
 Here's a video demonstrating the workflow:
 
-[Link to YouTube Video](https://youtu.be/tIAc2nEE0hc?si=f5t77rd3u6hQkWR5)
+[![video](http://img.youtube.com/vi/tIAc2nEE0hc/0.jpg)](https://youtu.be/tIAc2nEE0hc?si=f5t77rd3u6hQkWR5)
+
 
 ## Usage Instructions 📋
 

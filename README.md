@@ -134,7 +134,7 @@ Here's a video demonstrating the workflow:
 
 5)  Now  create an env file in the root directory  .  as    .env      and attack the env data.
 
-6)  now come back to the terminal and enter  # npm start                (now server is running )
+6)  now come back to the terminal and enter   npm start                (now server is running )
 
 7)  split and take another terminal  and enter  cd client         
 

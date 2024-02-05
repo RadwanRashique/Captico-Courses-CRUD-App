@@ -116,7 +116,8 @@ This project allows you to seamlessly add, edit, and delete courses with MongoDB
 
 Here's a video demonstrating the workflow:
 
-[![Watch the video]()]()
+[Link to YouTube Video](https://youtu.be/tIAc2nEE0hc?si=f5t77rd3u6hQkWR5)
+
 ## Usage Instructions 📋
 
 - Sign up for a new account by providing the required details, including username, email, phone number, and password. Make sure to follow the validation rules provided.

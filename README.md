@@ -95,7 +95,7 @@ This project allows you to seamlessly add, edit, and delete courses with MongoDB
 
 1. Clone the git repository.
 2. Install dependencies by running `npm install` in the root directory.
-3. Set up environment variables by creating a `.env` file in the root directory with the following content:
+3. Set up environment variables by creating a ##########`.env`######### file in the root directory with the following content:
 4. .env   file:
 **PORT=5000**
 **MONGODB_URL=mongodb+srv://your-mongodb-connection-string**
@@ -116,6 +116,11 @@ This project allows you to seamlessly add, edit, and delete courses with MongoDB
 
 Here's a video demonstrating the workflow:
 
+[![video](http://img.youtube.com/vi/tIAc2nEE0hc/0.jpg)](https://youtu.be/tIAc2nEE0hc?si=f5t77rd3u6hQkWR5)
+
+
+
+### code explanation
 [![video](http://img.youtube.com/vi/tIAc2nEE0hc/0.jpg)](https://youtu.be/tIAc2nEE0hc?si=f5t77rd3u6hQkWR5)
 
 

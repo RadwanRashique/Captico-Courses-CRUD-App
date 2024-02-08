@@ -34,6 +34,7 @@ function CourseList() {
 
   useEffect(() => {
     getCourseData();
+    
   }, []);
 
   // handling edit click
@@ -53,12 +54,10 @@ function CourseList() {
         toast.success(response.data.message);
         const updatedCourse = courseData.filter((course) => course._id !== courseId);
         setCourseData(updatedCourse);
-      } else {
-        toast.error(response.data.message);
-      }
+      } 
     } catch (error) {
       console.error(error);
-      toast.error('Deletion Failed');
+     
     }
   };
 

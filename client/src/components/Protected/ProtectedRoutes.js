@@ -4,7 +4,7 @@ import { RouteVariables } from '../../util/RouteVariables'
 function UserProtectedRoute(props) {
   
   if (localStorage.getItem('token')) {
-    console.log(localStorage.getItem('token',"888"))
+    console.log(localStorage.getItem('token'))
     return props.children
   }
   else {

@@ -76,12 +76,10 @@ function AddCourse() {
         if (response.data.success) {
           toast.success(response.data.message);
           navigate(RouteVariables.CourseList);
-        } else {
-          toast.error(response.data.message);
-        }
+        } 
       } catch (error) {
         console.error(error);
-        toast.error('Sorry, there was an error processing your request.');
+      
       } finally {
         setLoading(false);
       }
@@ -89,11 +87,6 @@ function AddCourse() {
   }
   return (
     <>
-      {loading && (
-        <div className="loading-container">
-          <div className="loading"></div>
-        </div>
-      )}
       <div className={`course-add-container ${loading ? 'loading-overlay' : ''}`}>
         <div className='add-course-back'>
           <Link to={RouteVariables.CourseList}><button className='Add-back-button'>Back</button></Link>

@@ -20,8 +20,8 @@ const RegisterUser = async (req, res) => {
         const { name, email, phone, password } = req.body
         const ExistingEmail = await UserModel.findOne({ email: email })
         if (ExistingEmail) {
-            // status code 400 bad request
-            return res.status(200).json({ message: "You Already Have An Account", success: false })
+          
+            return res.status(400).json({ message: "You Already Have An Account", success: false })
         }
 
         const SecurePassword = await bcrypt.hash(password, 10)
@@ -49,8 +49,8 @@ const LoginUser = async (req, res) => {
 
         const Emailcheck = await UserModel.findOne({ email: email })
         if (!Emailcheck) {
-            // status code 404 not found
-            return res.status(200).json({ message: "user Not found Check The Mail", success: false })
+          
+            return res.status(404).json({ message: "user Not found Check The Mail", success: false })
         }
 
         const passwordVerify = await bcrypt.compare(password, Emailcheck.password)

@@ -1,6 +1,6 @@
-import React,{useState} from 'react'
+import React, { useState } from 'react'
 import './Login.css'
-import { Link,useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { ApiEndPoints } from '../../util/apiRoutes'
 import { userRequest } from '../../Helper/Interceptor'
 import { RouteVariables } from '../../util/RouteVariables'
@@ -14,7 +14,7 @@ function Login() {
   });
 
 
-console.log(formData)
+  console.log(formData)
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -32,57 +32,54 @@ console.log(formData)
     }
 
     userRequest({
-      url:ApiEndPoints.userLogin,
-      method:'post',
-      data:formData
-   }).then((response)=>{
-console.log(response,"3456789")
-       
-          if (response.data.success) {
-              toast.success(response.data.message)
-              
-              localStorage.setItem("token", response.data.token)
-              navigate(RouteVariables.CourseList)
-              
-          }
-          else {
+      url: ApiEndPoints.userLogin,
+      method: 'post',
+      data: formData
+    }).then((response) => {
 
-              toast.error(response.data.message)
-          }
-      
-   }).catch((error)=>{
-    
-     console.log(error);
-      
-    toast.error('Sorry, this file is not acceptable.');
-    
-   
-   })
+
+      if (response.data.success) {
+        toast.success(response.data.message)
+
+        localStorage.setItem("token", response.data.token)
+        navigate(RouteVariables.CourseList)
+
+      }
+
+
+    }).catch((error) => {
+
+      console.log(error);
+
+
+
+
+    })
   }
-  
+
   return (
     <>
-   <div class='logincontainer'>
-    <div class='login-box fadeIn'>
-      <h2>SignIn</h2>
-      <form onSubmit={handleSubmit} >
-        <div class='inputdiv slideIn'>
-          <label htmlFor='email'>Email</label>
-          <br/>
-          <input id='password' type='email' name='email' onChange={handleChange} />
-          <br/>
-          <label htmlFor='password'>Password</label>
-          <br/>
-          <input id='password' type='text' name='password'onChange={handleChange} />
-        </div>
-        <button class='scaleUp'>Login</button>
-        <h3 class='signqus bounce'>Don't have an account?</h3>
-        <Link to={RouteVariables.userRegister} className='backtosingup pulse'>
-        SignUp
+      <div class='logincontainer'>
+        <div class='login-box fadeIn'>
+          <h2>SignIn</h2>
+          <form onSubmit={handleSubmit} >
+            <div class='inputdiv slideIn'>
+              <label htmlFor='email'>Email</label>
+              <br />
+              <input id='password' type='email' name='email' onChange={handleChange} />
+              <br />
+              <label htmlFor='password'>Password</label>
+              <br />
+              <input id='password' type='text' name='password' onChange={handleChange} />
+            </div>
+            <button class='scaleUp'>Login</button>
+            <h3 class='signqus bounce'>Don't have an account?</h3>
+            <Link to={RouteVariables.userRegister} className='backtosingup pulse'>
+              SignUp
             </Link>
-      </form>
-    </div>
-  </div>
+          </form>
+        </div>
+      </div>
     </>
   )
 }

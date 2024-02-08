@@ -11,7 +11,7 @@ function EditCourse() {
   const navigate = useNavigate();
   const [updation, setUpdation] = useState(false)
   const Data = useLocation();
-  console.log(Data?.state?.courseData.courseImage)
+  
   const prevData = Data?.state?.courseData;
 
   const [editData, setEditData] = useState({
@@ -48,15 +48,11 @@ function EditCourse() {
       if (response.data.success) {
         toast.success(response.data.message);
         navigate(RouteVariables.CourseList);
-      } else {
-        toast.error(response.data.message);
-      }
+      } 
     } catch (error) {
       console.error(error);
-      toast.error('Sorry, there was an error processing your request.');
-    } finally {
-
-    }
+     
+    } 
   };
 
   return (

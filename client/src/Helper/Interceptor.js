@@ -1,5 +1,6 @@
 
 // keep  request and response handling logic clean and centralized.
+import toast from 'react-hot-toast';
 import URL from '../config/BASE_URL'
 import axios from "axios";
 const user = axios.create({ baseURL: URL.BASE_URL });
@@ -14,6 +15,7 @@ export const userRequest = ({ ...options }) => {
   const onSuccess = (response) => response;
   const onError = (error) => {
     console.log("axios interceptor", error);
+    toast.error(error.response.data.message)
     return error;
   };
   return user(options).then(onSuccess).catch(onError);

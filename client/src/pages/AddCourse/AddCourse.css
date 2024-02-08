@@ -7,7 +7,7 @@
     height: 100vh;
   }
   
-  add-course-box {
+  .add-course-box {
     display: flex;
     justify-content: center;
     align-items: flex-start;

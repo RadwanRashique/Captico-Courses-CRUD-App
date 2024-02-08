@@ -68,14 +68,13 @@ function Register() {
       if (response.data.success) {
         toast.success(response.data.message);
         navigate(RouteVariables.UserLogin);
-      } else {
-        toast.error(response.data.message);
       }
 
     }).catch((error) => {
+      
       console.log(error);
 
-      toast.error('Sorry, this file is not acceptable.');
+      
 
     })
   }
